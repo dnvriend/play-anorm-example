@@ -1,0 +1,20 @@
+
+GET           /api-docs              controllers.ApiHelpController.getResources
+GET           /api-docs/*path        controllers.ApiHelpController.getResource(path: String)
+  
+
+GET           /api/info              com.github.dnvriend.component.buildinfo.controller.BuildInfoController.info
+    
+
+GET           /api/ping              com.github.dnvriend.component.ping.controller.PingController.ping
+    
+
+GET           /api/health            com.github.dnvriend.component.health.controller.HealthController.check
+    
+
+GET           /api/person            com.github.dnvriend.component.personregister.controller.PersonController.getAll(limit: Int ?= 10, offset: Int ?= 0)
+GET           /api/person/:id        com.github.dnvriend.component.personregister.controller.PersonController.getById(id: Long)
+POST          /api/person            com.github.dnvriend.component.personregister.controller.PersonController.save()
+PUT           /api/person/:id        com.github.dnvriend.component.personregister.controller.PersonController.updateById(id: Long)
+DELETE        /api/person/:id        com.github.dnvriend.component.personregister.controller.PersonController.deleteById(id: Long)
+    
